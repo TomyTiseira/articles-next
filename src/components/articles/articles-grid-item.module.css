@@ -1,0 +1,59 @@
+.articleContainer {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.articleContainer:hover {
+  transform: scale(1.03);
+}
+
+.articlesImageContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* Relación de aspecto 16:9 para móviles */
+}
+
+.articlesImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+  border-radius: 8px;
+}
+
+.articleContent {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.articleTitle {
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+  color: inherit;
+}
+
+.articleTitle:hover {
+  color: #2563eb;
+}
+
+.articlePrice {
+  font-weight: bold;
+}
+
+/* Ajustes para pantallas más grandes (≥ 768px) */
+@media (min-width: 768px) {
+  .articlesImageContainer {
+    padding-top: 0; /* Eliminar el padding-top */
+    height: auto; /* Altura flexible */
+  }
+
+  .articlesImage {
+    position: static; /* Eliminamos el posicionamiento absoluto */
+    height: auto; /* Altura flexible */
+  }
+}
