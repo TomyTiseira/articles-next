@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import styles from './articles-grid-item.module.css';
 import Link from 'next/link';
-import { useFavoritesStore } from '@/store/favoritesStore';
+import { useFavoritesStore } from '@/store';
 import { IoHeart, IoHeartOutline } from 'react-icons/io5';
 
 interface Props {
