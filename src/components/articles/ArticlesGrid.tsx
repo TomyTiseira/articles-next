@@ -1,13 +1,15 @@
-'use client'; // Marca este archivo como Client Component
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import { ArticlesGridItem } from './ArticlesGridItem';
 import styles from './articles-grid.module.css';
 import { useFetch } from '@/hooks/useFetch';
 import { fetchArticles } from '@/services/articleService';
+import { Searchbar } from '../ui/searchbar/Searchbar';
 
 
 export const ArticlesGrid = () => {
   const { data, isLoading, error } = useFetch(fetchArticles);
+  const [searchQuery, setSearchQuery] = useState('');
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -21,13 +23,23 @@ export const ArticlesGrid = () => {
     return <p>No hay Artículos disponibles</p>;
   }
 
+  // Filtrar articulos en función del título
+  const filteredArticles = data.filter((article) =>
+    article.titulo.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
+
   return (
-    <div className={styles.gridContainer}>
-      {
-        data.map(article => (
-          <ArticlesGridItem key={article.id} article={article} />
-        ))
-      }
+    <div>
+      {/* Barra de búsqueda */}
+      <Searchbar onSearch={(query) => setSearchQuery(query)} />
+      <div className={styles.gridContainer}>
+        {/* Lista de usuarios */}
+        {
+          filteredArticles.map(article => (
+            <ArticlesGridItem key={article.id} article={article} />
+          ))
+        }
+      </div>
     </div>
   );
 };
