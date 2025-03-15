@@ -9,3 +9,8 @@ export const fetchArticles = async(): Promise<Article[]> => {
   await simulateDelay();
   return articlesData as Article[];
 };
+
+export const fetchArticle = async(id: number): Promise<Article> => {
+  await simulateDelay();
+  return articlesData.find((article) => article.id === id) as Article;
+};
