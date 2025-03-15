@@ -13,6 +13,7 @@ export default function ArticleActions({
 }: ArticleActionsProps) {
   return (
     <div className={styles.actionsContainer}>
+      <h3 className={styles.quantityTitle}>Cantidad</h3>
       <QuantitySelector quantity={quantity} />
       <button className={styles.addToCartButton} onClick={onAddToCart}>
         Agregar al carrito

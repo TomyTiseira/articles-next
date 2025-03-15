@@ -35,9 +35,13 @@
 }
 
 
-.descriptionTitle, .ratingTitle {
+.descriptionTitle, .ratingTitle, .quantityTitle {
   font-weight: bold;
   font-size: 0.875rem;
+}
+
+.quantityTitle {
+  padding-bottom: 10px;
 }
 
 .description {
@@ -50,6 +54,7 @@
 }
 
 .addToCartButton {
+  width: 100%;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   padding: 0.5rem 1rem;
@@ -65,7 +70,7 @@
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 }
 
 .addToCartButton:hover {
@@ -73,12 +78,14 @@
 }
 
 .backButton {
+  width: 100%;
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: #f3f4f6;
   border: 2px solid #e5e7eb;
   border-radius: 8px;
   cursor: pointer;
+  text-align: center;
   text-decoration: none; 
   font-size: 0.875rem; 
   transition: background-color 0.3s ease; 
