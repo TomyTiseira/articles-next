@@ -2,9 +2,10 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
-  display: flex; /* Hace que el contenido interno ocupe la misma altura */
-  flex-direction: column; /* Organiza el contenido en columna */
-  justify-content: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid #e5e7eb;
 }
 
 .articleContainer:hover {
@@ -65,8 +66,13 @@
 
 /* Ajustes para pantallas más grandes (≥ 768px) */
 @media (min-width: 768px) {
+  .articleContainer {
+    min-height: 300px;
+    min-width: 300px;
+  }
+
   .articlesImageContainer {
-    padding-top: 0; /* Eliminar el padding-top */
+    padding: 0 10px;
     height: auto; /* Altura flexible */
   }
 
