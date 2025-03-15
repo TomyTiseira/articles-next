@@ -2,6 +2,9 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
+  display: flex; /* Hace que el contenido interno ocupe la misma altura */
+  flex-direction: column; /* Organiza el contenido en columna */
+  justify-content: end;
 }
 
 .articleContainer:hover {
