@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  padding: 8px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #f3f4f6; 
+}
+
+.icon {
+  color: #4b5563; 
+  font-size: 20px; 
+}
+
+.quantity {
+  width: 80px; 
+  margin: 0 12px; 
+  padding: 8px 16px;
+  background-color: #f3f4f6; 
+  text-align: center; 
+  border-radius: 8px;
+  font-size: 18px; 
+  font-weight: 600; 
+}
