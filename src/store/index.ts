@@ -1,2 +1,2 @@
 export * from './ui/ui-store';
-export * from './favoritesStore';
+export * from './favorite/favoritesStore';
