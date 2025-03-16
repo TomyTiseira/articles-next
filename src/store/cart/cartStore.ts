@@ -16,11 +16,19 @@ export const useCartStore = create<CartState>()((set) => ({
   addToCart: (item, quantity = 1) =>
     set((state) => {
       const existingItem = state.cartItems.find((i) => i.id === item.id);
+      const maxQuantity = 10;
       // Aumentar la cantidad del producto existente
       if (existingItem) {
+        const newQuantity = existingItem.cantidad + quantity;
+
+        if (newQuantity > maxQuantity) {
+          alert(`No puedes agregar más de ${maxQuantity} unidades de este producto.`);
+          return state; // No hacer cambios en el estado
+        }
+
         return {
           cartItems: state.cartItems.map((i) =>
-            i.id === item.id ? { ...i, cantidad: i.cantidad + quantity } : i,
+            i.id === item.id ? { ...i, cantidad: newQuantity } : i,
           ),
         };
       }
