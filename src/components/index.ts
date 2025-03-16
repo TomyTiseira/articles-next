@@ -6,3 +6,4 @@ export * from './articles/ArticlesGridItem';
 export * from './ui/sidebar/Sidebar';
 export * from './ui/quantity-selector/QuantitySelector';
 export * from './detailArticle/ArticleDetailContainer';
+export * from './cart/CartPopup';

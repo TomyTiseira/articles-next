@@ -28,20 +28,14 @@ export default function ArticleDetailPage({ params }: Props) {
   if (error) {
     return <div>Error: {error}</div>;
   }
-
-  const handleAddToCart = () => {
-    // Lógica para agregar al carrito
-    console.log('Artículo agregado al carrito');
-  };
-
   return (
     <ArticleDetailContainer
+      id={articleId}
       image={data?.imagen || ''}
       title={data?.titulo || ''}
       price={data?.precio || 0}
       rating={data?.rating || 0}
       description={data?.descripcion || ''}
-      onAddToCart={handleAddToCart}
     />
   );
 }
