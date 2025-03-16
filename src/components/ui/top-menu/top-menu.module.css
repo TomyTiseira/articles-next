@@ -34,14 +34,12 @@
   background-color: #f3f4f6; /* gray-100 */
 }
 
-.container {
-  display: flex;
-}
 
 .cartContainer {
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 
 .cartBadge {
