@@ -18,7 +18,6 @@ export const ArticlesGridItem = ({ article }: Props) => {
   return (
     <div className={styles.articleContainer}>
 
-      {/* Los requerimientos piden que se muestren los detalles complejos de un artículo cuando se hace clic en el título */}
       <div className={styles.articlesImageContainer}>
         <Image
           src={article.imagen}
