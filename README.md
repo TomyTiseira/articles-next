@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Articles App
 
-## Getting Started
+## Descripción
+Articles App es una aplicación diseñada para gestionar y mostrar artículos. Utiliza tecnologías modernas para ofrecer una experiencia de usuario fluida y eficiente.
 
-First, run the development server:
+## Tecnologías utilizadas
+- **Next.js**: Un framework para React que permite la creación de aplicaciones web y sitios estáticos con funcionalidades como el renderizado del lado del servidor.
+- **React**: Una biblioteca de JavaScript para construir interfaces de usuario, que permite crear componentes reutilizables.
+- **Zustand**: Una pequeña y rápida biblioteca para el manejo del estado en aplicaciones React.
+- **TypeScript**: Un superconjunto de JavaScript que añade tipado estático, mejorando la calidad del código y la experiencia de desarrollo.
+- **ESLint**: Una herramienta para identificar y reportar patrones en el código JavaScript, ayudando a mantener la calidad y consistencia del código.
 
+## Configuración
+Para configurar el proyecto, asegúrate de tener instalado Node.js y npm. Luego, sigue estos pasos:
+
+1. Clona el repositorio:
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   cd articles-next
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+## Levantar el proyecto
+Para levantar el proyecto en modo desarrollo, ejecuta el siguiente comando:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para levantar el proyecto en producción, primero compila la aplicación y luego iníciala:
+```bash
+npm run build
+npm start
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Esto iniciará el servidor de desarrollo y podrás acceder a la aplicación en `http://localhost:3000`.
