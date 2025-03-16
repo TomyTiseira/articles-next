@@ -3,6 +3,10 @@
 ## Descripción
 Articles App es una aplicación diseñada para gestionar y mostrar artículos. Utiliza tecnologías modernas para ofrecer una experiencia de usuario fluida y eficiente.
 
+## Despliegue
+La aplicación está desplegada en: [https://articles-shop.vercel.app/](https://articles-shop.vercel.app/)
+
+
 ## Tecnologías utilizadas
 - **Next.js**: Un framework para React que permite la creación de aplicaciones web y sitios estáticos con funcionalidades como el renderizado del lado del servidor.
 - **React**: Una biblioteca de JavaScript para construir interfaces de usuario, que permite crear componentes reutilizables.
