@@ -20,7 +20,7 @@ export default function Sidebar() {
         </>
       )}
 
-      {/* Sidebar */}
+      {/* Cart Popup */}
       <nav
         className={`${styles.sidebar} ${isSideMenuOpen ? styles.sidebarOpen : ''}`}
       >
