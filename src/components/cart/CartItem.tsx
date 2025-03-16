@@ -1,5 +1,5 @@
 'use client';
-import { IoClose } from 'react-icons/io5';
+import { IoTrashBin } from 'react-icons/io5';
 import Image from 'next/image';
 import styles from './cartItem.module.css';
 import { CartItem as CartItemType } from '@/types';
@@ -28,7 +28,7 @@ export const CartItem = ({ item, onRemove, onIncrease, onDecrease }: CartItemPro
         <p className={styles.itemTotal}>${(item.precio * item.cantidad).toFixed(2)}</p>
       </div>
       <button onClick={() => onRemove(item.id)} className={styles.removeButton}>
-        <IoClose size={16} />
+        <IoTrashBin size={16} color="red" />
       </button>
     </div>
   );
