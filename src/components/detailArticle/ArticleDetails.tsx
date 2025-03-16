@@ -6,8 +6,7 @@ interface ArticleDetailsProps {
   price: number;
   rating: number;
   description: string;
-  quantity: number;
-  onAddToCart: () => void;
+  onAddToCart: (quantity: number) => void;
 }
 
 export default function ArticleDetails({
@@ -15,7 +14,6 @@ export default function ArticleDetails({
   price,
   rating,
   description,
-  quantity,
   onAddToCart,
 }: ArticleDetailsProps) {
   return (
@@ -29,7 +27,7 @@ export default function ArticleDetails({
       <h3 className={styles.descriptionTitle}>Descripción</h3>
       <p className={styles.description}>{description}</p>
 
-      <ArticleActions quantity={quantity} onAddToCart={onAddToCart}/>
+      <ArticleActions onAddToCart={onAddToCart}/>
     </div>
   );
 }

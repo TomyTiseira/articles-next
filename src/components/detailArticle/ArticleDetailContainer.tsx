@@ -1,24 +1,40 @@
+'use client';
 import ArticleImage from './ArticleImage';
 import ArticleDetails from './ArticleDetails';
 import styles from './articleDetail.module.css';
+import { useCartStore } from '@/store/cart/cartStore';
 
 interface ArticleDetailProps {
+  id: number;
   image: string;
   title: string;
   price: number;
   rating: number;
   description: string;
-  onAddToCart: () => void;
 }
 
 export default function ArticleDetailContainer({
+  id,
   image,
   title,
   price,
   rating,
   description,
-  onAddToCart,
 }: ArticleDetailProps) {
+  const addToCart = useCartStore((state) => state.addToCart);
+
+  const handleAddToCart = (quantity: number) => {
+    addToCart(
+      {
+        id,
+        titulo: title,
+        imagen: image,
+        precio: price,
+      },
+      quantity,
+    );
+  };
+
   return (
     <div className={styles.container}>
       <ArticleImage src={image} alt={title} />
@@ -27,8 +43,7 @@ export default function ArticleDetailContainer({
         price={price}
         rating={rating}
         description={description}
-        quantity={2}
-        onAddToCart={onAddToCart}
+        onAddToCart={handleAddToCart}
       />
     </div>
   );
