@@ -27,28 +27,6 @@
   margin: 4px 0;
 }
 
-.itemActions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.quantityButton {
-  background: none;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 4px 8px;
-  cursor: pointer;
-}
-
-.quantityInput {
-  width: 60px;
-  padding: 4px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  text-align: center;
-}
-
 .itemTotal {
   font-size: 14px;
   font-weight: bold;

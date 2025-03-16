@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './cartItem.module.css';
+import styles from './cart-quantity-item.module.css';
 
 interface Props {
   quantity: number;

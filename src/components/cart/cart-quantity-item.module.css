@@ -1,0 +1,26 @@
+.itemActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantityButton {
+  background: none;
+  border: 1px solid #ddd;
+  width: 25px;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.quantityButton:hover {
+  background-color: #f3f4f6;
+}
+
+.quantityInput {
+  width: 60px;
+  padding: 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}

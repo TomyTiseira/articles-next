@@ -1,7 +1,7 @@
 'use client';
 import { IoTrashBin } from 'react-icons/io5';
 import Image from 'next/image';
-import styles from './cartItem.module.css';
+import styles from './cart-item.module.css';
 import { CartItem as CartItemType } from '@/types';
 import { CartQuantitySelector } from './CartQuantitySelector';
 
