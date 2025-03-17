@@ -1,6 +1,6 @@
 .cartPopup {
   position: fixed;
-  top: 20px; /* Ajusta este valor para que no quede pegado al borde superior */
+  top: 60px;
   left: 50%;
   transform: translateX(-50%); /* Solo se traslada horizontalmente */
   width: 400px;
@@ -9,7 +9,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   padding: 16px;
-  z-index: 1000;
+  z-index: 20;
 }
 
 .cartHeader {
