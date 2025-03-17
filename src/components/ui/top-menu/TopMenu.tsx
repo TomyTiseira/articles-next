@@ -6,8 +6,17 @@ import { useUiStore } from '@/store';
 import { useCartStore } from '@/store/cart/cartStore';
 
 export const TopMenu = () => {
-  const openSideMenu = useUiStore(state => state.openSideMenu);
+  const { openSideMenu, isSideMenuOpen, closeSideMenu } = useUiStore();
   const cartItems = useCartStore((state) => state.cartItems);
+
+  // Función para alternar el menú lateral
+  const toggleSideMenu = () => {
+    if (isSideMenuOpen) {
+      closeSideMenu(); // Cierra el menú si está abierto
+    } else {
+      openSideMenu(); // Abre el menú si está cerrado
+    }
+  };
 
   // Calcula la cantidad de productos distintos en el carrito
   const uniqueProductCount = cartItems.length;
@@ -28,7 +37,7 @@ export const TopMenu = () => {
       </div>
 
       {/* Cart */}
-      <div className={styles.cartContainer} onClick={openSideMenu}>
+      <div className={styles.cartContainer} onClick={toggleSideMenu} aria-label={isSideMenuOpen ? 'Cerrar carrito' : 'Abrir carrito'}>
         {uniqueProductCount !== 0 && (<span className={styles.cartBadge}>{uniqueProductCount}</span>)}
         <IoCartOutline className={styles.cartIcon} />
       </div>
