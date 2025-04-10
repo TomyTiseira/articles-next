@@ -46,7 +46,7 @@ export const useCartStore = create<CartState>()((set) => ({
   increaseQuantity: (id) =>
     set((state) => ({
       cartItems: state.cartItems.map((i) =>
-        i.id === id ? { ...i, cantidad: i.cantidad + 1 } : i,
+        i.id === id && i.cantidad < 10 ? { ...i, cantidad: i.cantidad + 1 } : i,
       ),
     })),
 
